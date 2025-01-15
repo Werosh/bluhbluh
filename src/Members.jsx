@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaLink } from "react-icons/fa";
 import weroshImg from "../public/Images/Team/werosh.jpg";
 import ishanImg from "../public/Images/Team/ishan.jpg";
+import rumethImg from "../public/Images/Team/rumeth.jpg";
 
 const Members = () => {
   const members = [
@@ -28,6 +29,18 @@ const Members = () => {
         github: "https://github.com/ishanHatharasinghe",
         linkedin: "https://www.linkedin.com/in/ishan-nilaksha-686461308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         portfolio: "https://ishanHatharasinghe.github.io/portfolio_web",
+      },
+    },
+    {
+      name: "Rumeth Rathubalage",
+      role: "{ Member(QA) }", // Added role property
+      description:
+        "SE Undergrad with a passion for weird things in life. I'm a QA Engineer who loves to break things and make them better. I'm a tech enthusiast who loves to learn new things and share them with others.",
+      imageUrl: rumethImg,
+      socialLinks: {
+        github: "https://github.com/RathuGT",
+        linkedin: "https://www.linkedin.com/in/rumethrathuu/",
+        portfolio: "-",
       },
     },
 
