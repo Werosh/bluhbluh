@@ -3,7 +3,14 @@ import { Link } from "react-scroll"; // Add scroll to sections functionality
 import { BsFillHouseGearFill } from "react-icons/bs";
 import { IoBackspaceSharp } from "react-icons/io5";
 import { motion } from "framer-motion"; // For animations
-import { FaHome, FaUsers, FaCogs, FaLaptopCode, FaProjectDiagram, FaPhoneAlt } from "react-icons/fa"; // Icons for the navbar
+import {
+  FaHome,
+  FaUsers,
+  FaCogs,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaPhoneAlt,
+} from "react-icons/fa"; // Icons for the navbar
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to toggle the mobile menu
@@ -15,7 +22,7 @@ const Navbar = () => {
     <div className="fixed top-0 z-50 w-full bg-opacity-50 shadow-lg backdrop-blur-[8px]">
       <div className="flex items-center justify-between p-4 mx-auto max-w-7xl">
         {/* Mobile Menu Button */}
-        <div className=" lg:hidden">
+        <div className="lg:hidden">
           <motion.button
             onClick={toggleMenu}
             whileHover={{ scale: 1.2 }}
@@ -94,6 +101,17 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen space-y-6 bg-gray-800 lg:hidden bg-opacity-80"
         >
+          {/* Back Icon */}
+          <motion.button
+            onClick={toggleMenu}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            className="absolute z-50 text-4xl text-white top-4 left-4"
+          >
+            <IoBackspaceSharp />
+          </motion.button>
+
+          {/* Mobile Links */}
           <Link
             to="home"
             smooth={true}
@@ -112,7 +130,7 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             <FaUsers size={20} />
-            <span>About Us</span>
+            <span>Who We Are</span>
           </Link>
           <Link
             to="team"
@@ -122,7 +140,7 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             <FaCogs size={20} />
-            <span>Team</span>
+            <span>Solutions Crew</span>
           </Link>
           <Link
             to="technos"
@@ -132,7 +150,7 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             <FaLaptopCode size={20} />
-            <span>TechNos</span>
+            <span>Digital Powers</span>
           </Link>
           <Link
             to="projects"
@@ -142,7 +160,7 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             <FaProjectDiagram size={20} />
-            <span>Projects</span>
+            <span>Our Creations</span>
           </Link>
           <Link
             to="contact-us"
@@ -152,7 +170,7 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             <FaPhoneAlt size={20} />
-            <span>Contact Us</span>
+            <span>Let's Connect</span>
           </Link>
         </motion.div>
       )}
