@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion"; // Add framer-motion for animations
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ const ContactUs = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // Loading state for spinner
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,19 +19,15 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setIsLoading(true); // Show loading spinner
+    setIsLoading(true);
 
-    // Simulate form submission delay (for demonstration)
     setTimeout(() => {
       const mailtoLink = `mailto:weroshprofy@gmail.com?subject=${encodeURIComponent(
         formData.subject
-      )}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${
-        formData.name
-      }%0AEmail: ${formData.email}`;
+      )}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.name}%0AEmail: ${formData.email}`;
 
       window.location.href = mailtoLink;
 
-      // Reset form data
       setFormData({
         name: "",
         email: "",
@@ -39,8 +35,8 @@ const ContactUs = () => {
         message: "",
       });
       setIsSubmitting(false);
-      setIsLoading(false); // Hide loading spinner after submission
-    }, 2000); // Simulate a delay (2 seconds)
+      setIsLoading(false);
+    }, 2000); // Simulate a delay
   };
 
   return (
@@ -51,7 +47,7 @@ const ContactUs = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }} // Animation triggers once when in view
+      viewport={{ once: true }}
     >
       <div className="mb-12 text-center">
         <motion.h1
@@ -72,8 +68,7 @@ const ContactUs = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          We would love to hear from you. Please fill out the form below to get
-          in touch with us.
+          We would love to hear from you. Please fill out the form below to get in touch with us.
         </motion.p>
       </div>
 
@@ -81,10 +76,7 @@ const ContactUs = () => {
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 gap-8 mb-6 sm:grid-cols-2">
             <div className="flex flex-col">
-              <label
-                htmlFor="name"
-                className="mb-2 text-lg font-semibold text-gray-800"
-              >
+              <label htmlFor="name" className="mb-2 text-lg font-semibold text-gray-800">
                 Your Name
               </label>
               <motion.input
@@ -103,10 +95,7 @@ const ContactUs = () => {
               />
             </div>
             <div className="flex flex-col">
-              <label
-                htmlFor="email"
-                className="mb-2 text-lg font-semibold text-gray-800"
-              >
+              <label htmlFor="email" className="mb-2 text-lg font-semibold text-gray-800">
                 Your Email
               </label>
               <motion.input
@@ -127,10 +116,7 @@ const ContactUs = () => {
           </div>
 
           <div className="flex flex-col mb-6">
-            <label
-              htmlFor="subject"
-              className="mb-2 text-lg font-semibold text-gray-800"
-            >
+            <label htmlFor="subject" className="mb-2 text-lg font-semibold text-gray-800">
               Subject
             </label>
             <motion.input
@@ -150,10 +136,7 @@ const ContactUs = () => {
           </div>
 
           <div className="flex flex-col mb-6">
-            <label
-              htmlFor="message"
-              className="mb-2 text-lg font-semibold text-gray-800"
-            >
+            <label htmlFor="message" className="mb-2 text-lg font-semibold text-gray-800">
               Your Message
             </label>
             <motion.textarea
