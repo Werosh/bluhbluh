@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaLink } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaLink, } from "react-icons/fa";
 import weroshImg from "../public/Images/Team/werosh.jpg";
 import ishanImg from "../public/Images/Team/ishan.jpg";
 import rumethImg from "../public/Images/Team/rumeth.jpg";
+import dilshanImg from "../public/Images/Team/dilshan.jpg";
+import sankalpaImg from "../public/Images/Team/sankalpa.jpg";
 
 const Members = () => {
   const members = [
@@ -27,8 +29,21 @@ const Members = () => {
       imageUrl: ishanImg,
       socialLinks: {
         github: "https://github.com/ishanHatharasinghe",
-        linkedin: "https://www.linkedin.com/in/ishan-nilaksha-686461308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        linkedin:
+          "https://www.linkedin.com/in/ishan-nilaksha-686461308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         portfolio: "https://ishanHatharasinghe.github.io/portfolio_web",
+      },
+    },
+    {
+      name: "Dilshan Sulakshana",
+      role: "{ Software Developer }", // Added role property
+      description:
+        "Enthusiastic BIT student at the University of Moratuwa,Sri Lanka. Experienced Computer Technician with one year of hands-on troubleshooting experience, dedicated to delivering efficient IT support to enhance organizational productivity, excited about achieving goals and advancing in the IT field.",
+      imageUrl: dilshanImg,
+      socialLinks: {
+        github: "https://github.com/DilshanSulakshana",
+        linkedin: "http://www.linkedin.com/in/dilshansk520",
+        portfolio: "-",
       },
     },
     {
@@ -40,6 +55,18 @@ const Members = () => {
       socialLinks: {
         github: "https://github.com/RathuGT",
         linkedin: "https://www.linkedin.com/in/rumethrathuu/",
+        portfolio: "-",
+      },
+    },
+    {
+      name: "Sankalpa Sithmina",
+      role: "{ UI designer }", // Added role property
+      description:
+        "I am a BIT undergraduate student at the University of Moratuwa, with a strong background in Frontend Development, UI/UX Design and Robotics. With a passion for creating intuitive digital experiences and building innovative systems, I combine creativity and technical expertise to deliver impactful solutions.",
+      imageUrl: sankalpaImg,
+      socialLinks: {
+        github: "https://github.com/sana1211",
+        linkedin: "http://www.linkedin.com/in/sankalpa-sithmina-29b728311",
         portfolio: "-",
       },
     },
