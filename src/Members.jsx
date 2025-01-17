@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaLink, } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaLink } from "react-icons/fa";
 import weroshImg from "../public/Images/Team/werosh.jpg";
 import ishanImg from "../public/Images/Team/ishan.jpg";
 import rumethImg from "../public/Images/Team/rumeth.jpg";
@@ -11,9 +11,9 @@ const Members = () => {
   const members = [
     {
       name: "Werosh Kriyanjala",
-      role: "{ Front-End Developer }", // Added role property
+      role: ["{ Software Engineer }" ,"{ Front-End Developer }"], // Array of roles
       description:
-        "A passionate Front-End Web Developer and a proud student of the University of Moratuwa, with expertise in crafting visually appealing, responsive, and user-friendly websites. I thrive on creating seamless digital interfaces that combine aesthetics and functionality, ensuring engaging and impactful web experiences for users and businesses alike",
+        "A passionate Front-End Web Developer and a proud student of the University of Moratuwa, with expertise in crafting visually appealing, responsive, and user-friendly websites. I thrive on creating seamless digital interfaces that combine aesthetics and functionality, ensuring engaging and impactful web experiences for users and businesses alike.",
       imageUrl: weroshImg,
       socialLinks: {
         github: "https://github.com/Werosh",
@@ -23,7 +23,7 @@ const Members = () => {
     },
     {
       name: "Ishan Nilaksha",
-      role: "{ UI designer }", // Added role property
+      role: ["{ UI Designer }"], // Array of roles
       description:
         "UG in HND Engineering (Electrical and Electronics) | UG in BIT University of Moratuwa | Data Science, Cloud, and Electronics Engineering Intern (SLTMobitel Digital Lab - Embryo Innovation Center, Maradana) | Freelancer Graphic Designer",
       imageUrl: ishanImg,
@@ -36,7 +36,7 @@ const Members = () => {
     },
     {
       name: "Dilshan Sulakshana",
-      role: "{ Software Developer }", // Added role property
+      role: ["{ Software Developer }"], // Array of roles
       description:
         "Enthusiastic BIT student at the University of Moratuwa,Sri Lanka. Experienced Computer Technician with one year of hands-on troubleshooting experience, dedicated to delivering efficient IT support to enhance organizational productivity, excited about achieving goals and advancing in the IT field.",
       imageUrl: dilshanImg,
@@ -48,7 +48,7 @@ const Members = () => {
     },
     {
       name: "Rumeth Rathubalage",
-      role: "{ Member(QA) }", // Added role property
+      role: ["{ Member (QA) }"], // Array of roles
       description:
         "SE Undergrad with a passion for weird things in life. I'm a QA Engineer who loves to break things and make them better. I'm a tech enthusiast who loves to learn new things and share them with others.",
       imageUrl: rumethImg,
@@ -60,7 +60,7 @@ const Members = () => {
     },
     {
       name: "Sankalpa Sithmina",
-      role: "{ UI designer }", // Added role property
+      role: ["{ UI Designer }"], // Array of roles
       description:
         "I am a BIT undergraduate student at the University of Moratuwa, with a strong background in Frontend Development, UI/UX Design and Robotics. With a passion for creating intuitive digital experiences and building innovative systems, I combine creativity and technical expertise to deliver impactful solutions.",
       imageUrl: sankalpaImg,
@@ -70,8 +70,6 @@ const Members = () => {
         portfolio: "-",
       },
     },
-
-    // You can add more members here.
   ];
 
   return (
@@ -106,10 +104,12 @@ const Members = () => {
                 />
               </motion.div>
               <h3 className="mb-2 text-xl font-semibold">{member.name}</h3>
-              <p className="text-center text-gray-600">{member.role}</p>{" "}
-              {/* Display Role */}
+              <div className="text-center text-gray-700 mb-[15px]">
+                {member.role.map((role, idx) => (
+                  <p key={idx}>{role}</p>
+                ))}
+              </div>
               <p className="text-center text-gray-600">{member.description}</p>
-              {/* Social Icons */}
               <div className="flex mt-4 space-x-4">
                 <a
                   title="GitHub"
