@@ -11,9 +11,9 @@ const Members = () => {
   const members = [
     {
       name: "Werosh Kriyanjala",
-      role: "{ Full-Stack Developer }", // Added role property
+      role: "{ Front-End Developer }", // Added role property
       description:
-        " A passionate Full-Stack Web Developer with expertise in building responsive, user-friendly websites and robust back-end systems. I thrive on creating seamless digital experiences that combine functionality and design, ensuring efficient and impactful web solutions for users and businesses alike.",
+        "A passionate Front-End Web Developer and a proud student of the University of Moratuwa, with expertise in crafting visually appealing, responsive, and user-friendly websites. I thrive on creating seamless digital interfaces that combine aesthetics and functionality, ensuring engaging and impactful web experiences for users and businesses alike",
       imageUrl: weroshImg,
       socialLinks: {
         github: "https://github.com/Werosh",
