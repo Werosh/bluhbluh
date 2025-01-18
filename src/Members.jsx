@@ -6,12 +6,13 @@ import ishanImg from "../public/Images/Team/ishan.jpg";
 import rumethImg from "../public/Images/Team/rumeth.jpg";
 import dilshanImg from "../public/Images/Team/dilshan.jpg";
 import sankalpaImg from "../public/Images/Team/sankalpa.jpg";
+import mallImg from "../public/Images/Team/mall.jpg";
 
 const Members = () => {
   const members = [
     {
       name: "Werosh Kriyanjala",
-      role: ["{ Software Engineer }" ,"{ Front-End Developer }"], // Array of roles
+      role: ["{ Software Engineer }", "{ Front-End Developer }"], // Array of roles
       description:
         "A passionate Front-End Web Developer and a proud student of the University of Moratuwa, with expertise in crafting visually appealing, responsive, and user-friendly websites. I thrive on creating seamless digital interfaces that combine aesthetics and functionality, ensuring engaging and impactful web experiences for users and businesses alike.",
       imageUrl: weroshImg,
@@ -43,6 +44,18 @@ const Members = () => {
       socialLinks: {
         github: "https://github.com/DilshanSulakshana",
         linkedin: "http://www.linkedin.com/in/dilshansk520",
+        portfolio: "-",
+      },
+    },
+    {
+      name: "Umayanga Gamage",
+      role: ["{ Business Analyst  }", "{ Frontend Developer }"], // Array of roles
+      description:
+        "Enthusiastic MIS UG at KIU University and BIT UG at the University of Moratuwa. Skilled in Business Analysis, UI/UX design, and Conducting Machine Learning researches. Experienced in analyzing requirements, crafting user-focused designs, and delivering top-notch project documentation. A dedicated learner and professional announcer passionate about driving IT solutions and innovation.",
+      imageUrl: mallImg,
+      socialLinks: {
+        github: "https://github.com/Maalgamage",
+        linkedin: "http://www.linkedin.com/in/umayanga-gamage-62ba05260",
         portfolio: "-",
       },
     },
