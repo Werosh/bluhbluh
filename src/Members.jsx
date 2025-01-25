@@ -11,31 +11,6 @@ import mallImg from "../public/Images/Team/mall.jpg";
 const Members = () => {
   const members = [
     {
-      name: "Werosh Kriyanjala",
-      role: ["{ Software Engineer }", "{ Front-End Developer }"], // Array of roles
-      description:
-        "A passionate Front-End Web Developer and a proud student of the University of Moratuwa, with expertise in crafting visually appealing, responsive, and user-friendly websites. I thrive on creating seamless digital interfaces that combine aesthetics and functionality, ensuring engaging and impactful web experiences for users and businesses alike.",
-      imageUrl: weroshImg,
-      socialLinks: {
-        github: "https://github.com/Werosh",
-        linkedin: "www.linkedin.com/in/werosh-kriyanjala-0318b1292",
-        portfolio: "https://weroshportfolio.netlify.app/",
-      },
-    },
-    {
-      name: "Ishan Nilaksha",
-      role: ["{ UI Designer }"], // Array of roles
-      description:
-        "UG in HND Engineering (Electrical and Electronics) | UG in BIT University of Moratuwa | Data Science, Cloud, and Electronics Engineering Intern (SLTMobitel Digital Lab - Embryo Innovation Center, Maradana) | Freelancer Graphic Designer",
-      imageUrl: ishanImg,
-      socialLinks: {
-        github: "https://github.com/ishanHatharasinghe",
-        linkedin:
-          "https://www.linkedin.com/in/ishan-nilaksha-686461308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        portfolio: "https://ishanHatharasinghe.github.io/portfolio_web",
-      },
-    },
-    {
       name: "Dilshan Sulakshana",
       role: ["{ Software Developer }"], // Array of roles
       description:
@@ -48,14 +23,65 @@ const Members = () => {
       },
     },
     {
+      name: "Werosh Kriyanjala",
+      role: ["{ Software Engineer }", "{ Front-End Developer }"], // Array of roles
+      description:
+        "A passionate Front-End Web Developer and a proud student of the University of Moratuwa, with expertise in crafting visually appealing, responsive, and user-friendly websites. I thrive on creating seamless digital interfaces that combine aesthetics and functionality, ensuring engaging and impactful web experiences for users and businesses alike.",
+      imageUrl: weroshImg,
+      socialLinks: {
+        github: "https://github.com/Werosh",
+        linkedin: "www.linkedin.com/in/werosh-kriyanjala-0318b1292",
+        portfolio: "https://weroshportfolio.netlify.app/",
+      },
+    },
+    {
+      name: "Sameera Udesh",
+      role: ["{ Back-End Developer }"], // Array of roles
+      description:
+        "UG in BIT University of Moratuwa | Software Developer | Passionate about Web Design, Front-End & Back-End Development",
+      imageUrl: "https://avatars.githubusercontent.com/u/77191698?v=4",
+      socialLinks: {
+        github: "https://github.com/sameeraudesh995",
+        linkedin: "#",
+        portfolio: "https://sameeraudesh995.github.io/myportfolio-original/# ",
+      },
+    },
+    {
+      name: "Ishan Nilaksha",
+      role: ["{ Electronic Engineer } ", "{ UI Designer }"], // Array of roles
+      description:
+        "UG in HND Engineering (Electrical and Electronics) | UG in BIT University of Moratuwa | Data Science, Cloud, and Electronics Engineering Intern (SLTMobitel Digital Lab - Embryo Innovation Center, Maradana) | Freelancer Graphic Designer",
+      imageUrl: ishanImg,
+      socialLinks: {
+        github: "https://github.com/ishanHatharasinghe",
+        linkedin:
+          "https://www.linkedin.com/in/ishan-nilaksha-686461308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        portfolio: "https://ishanHatharasinghe.github.io/portfolio_web",
+      },
+    },
+
+    {
       name: "Umayanga Gamage",
       role: ["{ Business Analyst  }", "{ Frontend Developer }"], // Array of roles
       description:
         "Enthusiastic MIS UG at KIU University and BIT UG at the University of Moratuwa. Skilled in Business Analysis, UI/UX design, and Conducting Machine Learning researches. Experienced in analyzing requirements, crafting user-focused designs, and delivering top-notch project documentation. A dedicated learner and professional announcer passionate about driving IT solutions and innovation.",
       imageUrl: mallImg,
       socialLinks: {
-        github: "https://github.com/Maalgamage",
+        github: "https://github.com/Maalgamage~",
         linkedin: "http://www.linkedin.com/in/umayanga-gamage-62ba05260",
+        portfolio: "-",
+      },
+    },
+
+    {
+      name: "Sankalpa Sithmina",
+      role: ["{ UI Designer }"], // Array of roles
+      description:
+        "I am a BIT undergraduate student at the University of Moratuwa, with a strong background in Frontend Development, UI/UX Design and Robotics. With a passion for creating intuitive digital experiences and building innovative systems, I combine creativity and technical expertise to deliver impactful solutions.",
+      imageUrl: sankalpaImg,
+      socialLinks: {
+        github: "https://github.com/sana1211",
+        linkedin: "http://www.linkedin.com/in/sankalpa-sithmina-29b728311",
         portfolio: "-",
       },
     },
@@ -71,18 +97,6 @@ const Members = () => {
         portfolio: "-",
       },
     },
-    {
-      name: "Sankalpa Sithmina",
-      role: ["{ UI Designer }"], // Array of roles
-      description:
-        "I am a BIT undergraduate student at the University of Moratuwa, with a strong background in Frontend Development, UI/UX Design and Robotics. With a passion for creating intuitive digital experiences and building innovative systems, I combine creativity and technical expertise to deliver impactful solutions.",
-      imageUrl: sankalpaImg,
-      socialLinks: {
-        github: "https://github.com/sana1211",
-        linkedin: "http://www.linkedin.com/in/sankalpa-sithmina-29b728311",
-        portfolio: "-",
-      },
-    },
   ];
 
   return (
@@ -94,7 +108,12 @@ const Members = () => {
         {members.map((member, index) => (
           <motion.div
             key={index}
-            className="relative p-6 transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl"
+            className={`relative p-6 transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl 
+              ${
+                index === members.length - 1 && members.length % 3 !== 0
+                  ? "sm:col-start-2 lg:col-start-2"
+                  : ""
+              }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

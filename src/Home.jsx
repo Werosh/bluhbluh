@@ -13,8 +13,17 @@ const Home = () => {
       await textControls.start({ opacity: 0, y: 50 }); // Initial hidden state
 
       await Promise.all([
-        gearControls.start({ opacity: 1, scale: 1, y: 0, transition: { duration: 1, type:"spring", bounce: 0.25 } }),
-        textControls.start({ opacity: 1, y: 0, transition: { duration: 1, delay: 0.5, type:"spring", bounce: 0.25 } }),
+        gearControls.start({
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          transition: { duration: 1, type: "spring", bounce: 0.25 },
+        }),
+        textControls.start({
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, delay: 0.5, type: "spring", bounce: 0.25 },
+        }),
       ]);
       setLoading(false); // Set loading to false after animation
     };
@@ -46,7 +55,7 @@ const Home = () => {
 
   if (loading) {
     return (
-      <div  className="flex items-center justify-center w-full h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      <div className="flex items-center justify-center w-full h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
@@ -63,7 +72,10 @@ const Home = () => {
   }
 
   return (
-    <div id="home" className="flex items-center justify-center w-full min-h-screen ">
+    <div
+      id="home"
+      className="flex items-center justify-center w-full min-h-screen "
+    >
       <div className="flex flex-col items-center justify-center space-y-10 sm:flex-row sm:space-y-0 sm:space-x-16 md:space-x-24">
         <motion.div
           animate={gearControls}
@@ -86,7 +98,23 @@ const Home = () => {
         >
           <div className="relative z-10 flex items-center justify-between w-full px-5">
             {[
-              "B", "L", "U", "H", " ", "B", "L", "U", "H", " ", "D", "E", "V",
+              "T",
+              "H",
+              "E",
+              " ",
+              "A",
+              "L",
+              "P",
+              "H",
+              "A",
+              " ",
+              "W",
+              "I",
+              "Z",
+              "A",
+              "R",
+              "D",
+              "S",
             ].map((letter, index) => (
               <motion.h1
                 key={index}
